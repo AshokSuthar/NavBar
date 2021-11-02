@@ -1,0 +1,6 @@
+<ul id="menu">
+  <li *ngFor="let item of navItems">
+    <a [href]="item.link">{{ item.title }}</a>
+    <app-navbar *ngIf="item.subnav" [navItems]="item.subnav"></app-navbar>
+  </li>
+</ul>

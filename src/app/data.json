@@ -1,0 +1,16 @@
+{
+  "general": { "logo": "assets/images/logo.png", "name": "Company Name" },
+  "navigation": [
+    { "title": "Home", "link": "index.html" },
+    {
+      "title": "Products",
+      "link": "product.html",
+      "subnav": [
+        { "title": "Webapps", "link": "products/webapps.html" },
+        { "title": "Mobile Apps", "link": "products/mobile-apps.html" }
+      ]
+    },
+    { "title": "Gallery", "link": "gallery.html" },
+    { "title": "Contact", "link": "contact.html" }
+  ]
+}
