@@ -1,16 +1,13 @@
-<link
-  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-  rel="stylesheet"
-/>
-<nav id="navbar" class="">
-  <div class="nav-wrapper">
-    <!-- Navbar Logo -->
-    <div class="logo">
-      <!-- Logo Placeholder for Inlustration -->
-      <a href="#home"><i class="fa fa-angellist"></i> {{ logo }}</a>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand text-warning" href="#">{{ logo }}</a>
+  <ul class="navbar-nav">
+    <app-navbar *ngFor="let item of navItems" [currItem]="item"> </app-navbar>
+  </ul>
+  <!-- <div class="dropdown-menu">
+          <a class="dropdown-item" [href]="item.subnav.link">{{
+            item.subnav.title
+          }}</a>
+        </div> -->
 
-    <!-- Navbar Links -->
-    <app-navbar></app-navbar>
-  </div>
+  <!-- <app-navbar></app-navbar> -->
 </nav>

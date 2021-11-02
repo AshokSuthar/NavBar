@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { default as data } from '../app/data.json';
 
 @Component({
@@ -7,6 +7,7 @@ import { default as data } from '../app/data.json';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  @Input() navItems: any = data.navigation;
   logo: string = data.general.name;
   title = 'navbar';
 }

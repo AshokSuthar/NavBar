@@ -1,6 +1,20 @@
-<ul id="menu">
-  <li *ngFor="let item of navItems">
-    <a [href]="item.link">{{ item.title }}</a>
-    <app-navbar *ngIf="item.subnav" [navItems]="item.subnav"></app-navbar>
-  </li>
-</ul>
+<li [className]="listClass">
+  <a
+    [className]="anchorClass"
+    [href]="hrefLink"
+    id="navbarDropdown"
+    role="button"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+    >{{ currItem.title }}</a
+  >
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown" *ngIf="hasSubNav">
+    <a
+      class="dropdown-item"
+      [href]="subItem.link"
+      *ngFor="let subItem of subNav"
+      >{{ subItem.title }}</a
+    >
+  </div>
+</li>
